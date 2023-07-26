@@ -7,7 +7,7 @@
 </div>
 <div>
     {% for stage in stages %}
-    <h1>{{ stage.name }}: {{ stage.terrain }}, {{ stage.weather }}
+    <h1><a href="/stages/{{ stage.id }}">{{ stage.name }}</a>: {{ stage.terrain }}, {{ stage.weather }}
         {% for character in stage.characters  %}
         {{ character.name }}
         {% endfor %}
