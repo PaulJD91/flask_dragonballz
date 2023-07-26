@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 PASSWORD = os.getenv('PASSWORD')
 
@@ -13,6 +14,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = f"postgresql://postgres:{PASSWORD}@local
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+from models import Character, Stage
 
 @app.route("/")
 def home():
