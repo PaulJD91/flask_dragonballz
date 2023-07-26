@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/characters" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input 
+                type="text"
+                name="name"
+                id="name"
+                required
+                autofocus
+            >
+        </div>
+        <div>
+            <label for="race">Race:</label>
+            <input 
+                type="text"
+                name="race"
+                id="race"
+                required
+                autofocus
+            >
+        </div>
+        <div>
+            <label for="alignment">Alignment:</label>
+            <input 
+                type="text"
+                name="alignment"
+                id="alignment"
+                required
+                autofocus
+            >
+        </div>
+		<div>
+            <label for="special_move">Special Move:</label>
+            <input 
+                type="text"
+                name="special_move"
+                id="special_move"
+                required
+                autofocus
+            >
+        </div>
+		<div>
+            <label for="power_level">Power Level:</label>
+            <input 
+                type="number"
+                name="power_level"
+                id="power_level"
+                required
+                autofocus
+            >
+        </div>
+		<div>
+            <label for="stage_id">Stage ID:</label>
+            <input 
+                type="number"
+                name="stage_id"
+                id="stage_id"
+                required
+                autofocus
+            >
+        </div>
+        <button type="submit">Add Stage</button>
+
+    </form>
+{% endblock content %}
