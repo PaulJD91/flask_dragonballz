@@ -38,7 +38,7 @@ def create_character():
     power_level = request.form['power_level']
     stage_id = request.form['stage_id']
 
-    character = Stage(name=name, race=race, alignment=alignment, special_move=special_move, stage_id=stage_id)
+    character = Character(name=name, race=race, alignment=alignment, special_move=special_move, stage_id=stage_id)
 
     db.session.add(character)
     db.session.commit()
