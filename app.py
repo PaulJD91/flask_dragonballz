@@ -16,6 +16,9 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 from models import Character, Stage
 
+from controllers.characters_controller import characters_blueprint
+app.register_blueprint(characters_blueprint)
+
 @app.route("/")
 def home():
 	return "This is the home page!"
