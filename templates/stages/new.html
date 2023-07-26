@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/stages" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input 
+                type="text"
+                name="name"
+                id="name"
+                required
+                autofocus
+            >
+        </div>
+        <div>
+            <label for="terrain">Terrain:</label>
+            <input 
+                type="text"
+                name="terrain"
+                id="terrain"
+                required
+                autofocus
+            >
+        </div>
+        <div>
+            <label for="weather">Weather:</label>
+            <input 
+                type="text"
+                name="weather"
+                id="weather"
+                required
+                autofocus
+            >
+        </div>
+        <button type="submit">Add Stage</button>
+
+    </form>
+{% endblock content %}
