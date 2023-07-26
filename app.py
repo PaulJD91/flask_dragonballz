@@ -19,6 +19,6 @@ from models import Character, Stage
 from controllers.characters_controller import characters_blueprint
 app.register_blueprint(characters_blueprint)
 
-@app.route("/")
-def home():
-	return "This is the home page!"
+# @app.route("/")
+# def home():
+# 	return "This is the home page!"
