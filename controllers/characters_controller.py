@@ -6,4 +6,5 @@ characters_blueprint = Blueprint("characters", __name__)
 
 @characters_blueprint.route("/")
 def home():
-    return render_template('index.html')
+    stages = Stage.query.all()
+    return render_template('index.html', stages=stages)

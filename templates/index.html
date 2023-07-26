@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div>
     <a href="/stages/new">Add Stage</a>
     <a href="/characters/new">Add Character</a>
-    <h1></h1>
+</div>
+<div>
+    {% for stage in stages %}
+    <h1>{{ stage.name }}: {{ stage.terrain }}, {{ stage.weather }}
+        {% for character in stage.characters  %}
+        {{ character.name }}
+        {% endfor %}
+       
+    </h1>
+    {% endfor %}
+    
+</div>
+    
 {% endblock content %}
 
