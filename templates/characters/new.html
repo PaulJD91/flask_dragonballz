@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="main_content">
     <form action="/characters" method="post">
         <div>
             <label for="name">Name:</label>
@@ -65,4 +66,5 @@
         <button type="submit">Add Stage</button>
 
     </form>
+</div>
 {% endblock content %}
