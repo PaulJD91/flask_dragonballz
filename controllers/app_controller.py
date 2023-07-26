@@ -29,3 +29,18 @@ def create_stage():
     db.session.commit()
     return redirect('/')
 
+@app_blueprint.route("/characters", methods=['POST'])
+def create_character():
+    name = request.form['name']
+    race = request.form['race']
+    alignment = request.form['alignment']
+    special_move = request.form['special_move']
+    power_level = request.form['power_level']
+    stage_id = request.form['stage_id']
+
+    character = Stage(name=name, race=race, alignment=alignment, special_move=special_move, stage_id=stage_id)
+
+    db.session.add(character)
+    db.session.commit()
+    return redirect('/')
+
