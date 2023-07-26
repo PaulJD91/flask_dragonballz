@@ -44,3 +44,12 @@ def create_character():
     db.session.commit()
     return redirect('/')
 
+@app_blueprint.route("/stages/<id>")
+def show_stage(id):
+    stage = Stage.query.get(id)
+    return render_template("stages/show.html", stage=stage)
+
+@app_blueprint.route("/characters/<id>")
+def show_character(id):
+    character = Character.query.get(id)
+    return render_template("characters/show.html", character=character)
